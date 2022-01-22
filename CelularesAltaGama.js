@@ -89,3 +89,5 @@ document.write(`
         ${celular1.altaGamaInfo()} <br> <br>
         ${celular2.altaGamaInfo()} <br>    
         `);
+
+        
