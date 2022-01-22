@@ -48,9 +48,9 @@ class Celular {
     }
 }
 
-equipo1 = new Celular ("rojo","150gr","5 pulgadas","full hd","2GB");
-equipo2 = new Celular ("negro","120gr","3 pulgadas","4k","3GB");
-equipo3 = new Celular ("celeste","200gr","10 pulgadas","4k","4GB");
+//equipo1 = new Celular ("rojo","150gr","5 pulgadas","full hd","2GB");
+//equipo2 = new Celular ("negro","120gr","3 pulgadas","4k","3GB");
+//equipo3 = new Celular ("celeste","200gr","10 pulgadas","4k","4GB");
 
 // equipo1.presionarBotonEncendido()
 // equipo1.tomarFoto()
@@ -58,10 +58,34 @@ equipo3 = new Celular ("celeste","200gr","10 pulgadas","4k","4GB");
 // equipo1.reiniciar()
 // equipo1.presionarBotonEncendido()
 
-
+/*
 document.write (`
     ${equipo1.mobileInfo()} <br>
     ${equipo2.mobileInfo()} <br>
     ${equipo3.mobileInfo()} <br>
 `);
+*/
 
+class CelularAltaGama extends Celular {
+    constructor(color,peso,resolucionPantalla,camara,memoriaRam,resolucionAlta){
+        super(color,peso,resolucionPantalla,camara,memoriaRam);
+        this.resolucionAlta = resolucionAlta;
+    }
+    grabarVideoLento(){
+        alert("grabacion en camara lenta");
+    }
+    reconocimientoFacial(){
+        alert("estas teniendo reconocimiento facial");
+    }
+    altaGamaInfo(){
+        return this.mobileInfo() + `Resolucion de camara extra: ${this.resolucionAlta}`;
+    }
+}
+
+celular1 = new CelularAltaGama("blanco","50gr","4k","2 camaras","5GB","Excelente resolucion");
+celular2 = new CelularAltaGama("verde","60gr","4k","3 camaras","6GB","Excelente resolucion");
+
+document.write(`
+        ${celular1.altaGamaInfo()} <br> <br>
+        ${celular2.altaGamaInfo()} <br>    
+        `);
