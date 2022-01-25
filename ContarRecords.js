@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem
+
 function breakingRecords(scores) {
     let min = scores[0]
     let countMin = 0

@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/challenges/mini-max-sum/problem
+
 function miniMaxSum(arr) {
     let max = 0
     let min = arr[0]
