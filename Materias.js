@@ -46,3 +46,4 @@ mostrarInformacion("quimica");
 mostrarInformacion("programacion");
 
 document.write(cantidadDeClases("paula"))
+
